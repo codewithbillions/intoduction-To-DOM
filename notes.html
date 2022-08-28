@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+</head>
+<body>
+    <h1>DOM
+    MANIPULATION
+    (Workshop)</h1>
+    <h2>Summary</h2>
+    <ul>
+        <li>What is the DOM</li>
+        <li>Finding HTML Element</li>
+        <li>Changing HTML Element</li>
+        <li>Writing directly into the HTML output stream</li>
+        <li>Event Handlers</li>
+        <li>Node Relationships</li>
+    </ul>
+    <h2>What is the DOM</h2>
+    <img width="500px" height="500px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1200px-DOM-model.svg.png" alt="">
+    <br>
+    <h1>Finding HTML Elements</h1>
+    <ul>
+        <li>Get Element by ID</li>
+        <li>Get element by class</li>
+        <li>Get element by tag name</li>
+        <li>querySelector</li>
+        <li>querySelectorAll</li>
+    </ul>
+
+    <h3>Get Element by ID</h3>
+    <p>let title = document.getElementById(‘header-title’);
+    </p>
+    <h4>The getElementById() method is used to get a single element by its id.</h4>
+    <h3>Get Element by class name</h3>
+    <p>let items = document.getElementsByClassName(‘list-items’);</p>
+    <h4>The getElementByclassName() method is used to get a single element by its class.</h4>
+    <h3>Get element by tag name</h3>
+    <p>let listItems = document.getElementsByTagName(‘li’);</p> 
+    <h4>We can also get our elements by tag name using the getElementsByTagName() method.</h4>
+    <h3>querySelector</h3>
+    <h4>GET by id;</h4>
+    <p>let header = document.querySelector(‘#header’);</p>
+    <h4>Get by class;</h4>
+    <p>let items = document.querySelector(‘.list-items’);</p>
+    <h4>Get by tag;</h4>
+    <p>let headings = document.querySelector(‘h1’);</p>
+    <h4>Get more specific elements</h4>
+    <p>Get more specific elements:</p>
+    <h3>querySelectorAll</h3>
+    <p>let heading = document.querySelectorAll(‘h1.heading’);</p>
+    <h4>The querySelectorAll() method is completely the same as the querySelector() except that it returns all elements that fit the CSS Selector.</h4>
+    <h1>Changing HTML Elements</h1>
+    <h3>Changing the HTML</h3>
+    <p>document.getElementById(“#header”).innerHTML = “Hello World!”;</p>
+    <p>document.getElementsByTagName("div").innerHTML = "<h1>Hello World!</h1>"</p>
+    <h3>Changing a value of an attribute</h3>
+    <p>document.getElementsByTag(“img”).src = “test.jpg”;</p>
+    <h3>Changing the style</h3>
+    <p>document.getElementById(id).style.property = new style;</p>
+    <p>document.getElementsByTag(“h1”).style.borderBottom = “solid 3px #000”;</p>
+    <h3>Adding elements</h3>
+    <p>let div = document.createElement(‘div’);</p>
+    <p>let newContent = document.createTextNode("Hello World!"); 
+        div.appendChild(newContent); <br>
+        document.body.insertBefore(div, currentDiv);</p>
+        <h3>Deleting elements</h3>
+        <p>let elem = document.querySelector('#header');
+          <br>  elem.parentNode.removeChild(elem);</p>
+        <h3>Replace elements</h3>
+        <p>let div = document.querySelector('#div');
+            <br>
+            let newDiv = document.createElement(‘div’);
+            <br>
+            newDiv.innerHTML = "Hello World2"
+            div.parentNode.replaceChild(newDiv, div);</p>
+            <h1>Writing directly into the HTML output stream</h1>
+            <p>`ocument.write(“<-h1>Hello World!</-h1><-p>This is a paragraph!</-p>”);`</p>
+            <p>document.write(Date());</p>
+            <h1>Event Handlers</h1>
+            <p> Assign Events</p>
+            <-h1 onclick=”this.innerHTML = ‘Hello!’”>Click me!<-/h1>
+                <-h1 onclick=”changeText(this)”>Click me!<-/h1>
+                    <p>document.getElementById(“btn”).onclick = changeText();</p>
+                    <h1>Assign Events Listeners</h1>
+                    <p>document.getElementById(“btn”).addEventListener('click', runEvent);</p>
+             <p>document.getElementById(“btn”).addEventListener('mouseover', runEvent);</p>
+             <h1>Node Relationships</h1>
+             <h3>Navigating Between Nodes
+                We can navigate between nodes using these properties:</h3>
+                <ul>
+                    <li>parentNode</li>
+                    <li>childNodes</li>
+                    <li>firstChild</li>
+                    <li>lastChild</li>
+                    <li>nextSibling</li>
+                </ul>
+                <p>let parent = document.getElementById(“heading”).parentNode</p>
+
+
+</body>
+</html>
+
+AlphaTangoGolf123@@
